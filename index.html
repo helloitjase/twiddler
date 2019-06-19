@@ -13,15 +13,30 @@
               var $body = $('body');
               $body.html('');
               var $title = $('<h1 class="title">Twiddler</h1>').appendTo('body');
-      
+              var $moreTweets = $('<button type="button" class="button">More Tweets!</button>').appendTo('body'); 
+
+              $('.button').click(function () {
+                var index = streams.home.length - 1;
+                while(index >= 0){
+                  var tweet = streams.home[index];
+                  var $tweet = $('<div></div>');
+                  $tweet.text('@' + tweet.user + ': ' + tweet.message);
+                  $tweet.appendTo($body);
+                  index -= 1;
+                }
+              });
+
+
+              
+
               var index = streams.home.length - 1;
-              while(index >= 0){
-                var tweet = streams.home[index];
-                var $tweet = $('<div></div>');
-                $tweet.text('@' + tweet.user + ': ' + tweet.message);
-                $tweet.appendTo($body);
-                index -= 1;
-              }
+                while(index >= 0){
+                  var tweet = streams.home[index];
+                  var $tweet = $('<div></div>');
+                  $tweet.text('@' + tweet.user + ': ' + tweet.message);
+                  $tweet.appendTo($body);
+                  index -= 1;
+                }
               
             });
       

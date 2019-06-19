@@ -70,4 +70,21 @@ Layout
   font-size: 50px;
 }
 
+/*
+======
+Buttons
+======
+*/
+
+.button {
+  color: cornflowerblue;
+  background-color: lightgoldenrodyellow;
+  text-align: right;
+
+}
+
+.button:hover {
+  color: yellow;
+}
+
 
