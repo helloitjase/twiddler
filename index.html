@@ -8,35 +8,33 @@
   <body> 
         <script>
           
-
             $(document).ready(function(){
               var $body = $('body');
               $body.html('');
-              var $title = $('<h1 class="title">Twiddler</h1>').appendTo('body');
-              var $moreTweets = $('<button type="button" class="button">More Tweets!</button>').appendTo('body'); 
+              var heading = $('<header><h1 class="title">Twittler</h1></header>').appendTo('body');
+              var $moreTweets = $('<section><button type="button" class="button">More Tweets!</button></section>').appendTo('body'); 
 
-              $('.button').click(function () {
+              $moreTweets.click(function () {
                 var index = streams.home.length - 1;
                 while(index >= 0){
                   var tweet = streams.home[index];
                   var $tweet = $('<div></div>');
-                  $tweet.text('@' + tweet.user + ': ' + tweet.message);
+                  $tweet.html('<a class="user">@' + tweet.user + '</a>: ' + tweet.message + ' twittled ' + tweet.created_at);
                   $tweet.appendTo($body);
                   index -= 1;
                 }
               });
 
-
-              
-
               var index = streams.home.length - 1;
                 while(index >= 0){
                   var tweet = streams.home[index];
                   var $tweet = $('<div></div>');
-                  $tweet.text('@' + tweet.user + ': ' + tweet.message);
+                  $tweet.html('<a class="user">@' + tweet.user + '</a>: ' + tweet.message + ' twittled ' + tweet.created_at);
                   $tweet.appendTo($body);
                   index -= 1;
                 }
+
+               
               
             });
       
