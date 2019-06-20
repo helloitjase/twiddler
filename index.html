@@ -13,33 +13,31 @@
               $body.html('');
               var heading = $('<header class="banner"><h1 class="title">Twittler</h1></header>').appendTo('body');
               var $moreTweets = $('<section><button type="button" class="button">More Tweets!</button></section>').appendTo('body'); 
-              
+              var $tweetsStream = $('<section class="stream"></section>').appendTo($body);
+              var place;
               
               $moreTweets.click(function () {
-                var index = streams.home.length - 1;
-                while(index >= 0){
+                var index = place;
+                while(index <= streams.home.length - 1){
+                  place = streams.home.length - 1;
                   var tweet = streams.home[index];
                   var $tweet = $('<div></div>');
-                  $tweet.html('<a class="user">@' + tweet.user + '</a>: ' + tweet.message + ' twittled ' + tweet.created_at);
-                  $tweet.appendTo($body);
-                  index -= 1;
+                  $tweet.html('<a class="user">@' + tweet.user + '</a>: ' + tweet.message + '<br>' + tweet.created_at);
+                  $tweet.prependTo('.stream');
+                  index += 1;
                 }
               });
 
               var index = streams.home.length - 1;
+              place = streams.home.length -1;
                 while(index >= 0){
                   var tweet = streams.home[index];
                   var $tweet = $('<div></div>');
-                  $tweet.html('<a class="user">@' + tweet.user + '</a>: ' + tweet.message + ' twittled ' + tweet.created_at);
-                  $tweet.appendTo($body);
+                  $tweet.html('<a class="user">@' + tweet.user + '</a>: ' + tweet.message + '<br>' + tweet.created_at);
+                  $tweet.appendTo('.stream');
                   index -= 1;
                 }
-              
-              function displayTweets(user) {
-                return window.open(streams.users[user]);
-              }
-                
-              
+             
                
               
             });
