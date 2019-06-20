@@ -11,9 +11,10 @@
             $(document).ready(function(){
               var $body = $('body');
               $body.html('');
-              var heading = $('<header><h1 class="title">Twittler</h1></header>').appendTo('body');
+              var heading = $('<header class="banner"><h1 class="title">Twittler</h1></header>').appendTo('body');
               var $moreTweets = $('<section><button type="button" class="button">More Tweets!</button></section>').appendTo('body'); 
-
+              
+              
               $moreTweets.click(function () {
                 var index = streams.home.length - 1;
                 while(index >= 0){
@@ -33,7 +34,12 @@
                   $tweet.appendTo($body);
                   index -= 1;
                 }
-
+              
+              function displayTweets(user) {
+                return window.open(streams.users[user]);
+              }
+                
+              
                
               
             });
