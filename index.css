@@ -1,0 +1,125 @@
+body {
+  background: linear-gradient(to top, #a8edea 0%, #fed6e3 100%) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+    width: 37%;
+    margin: auto;
+}
+
+.title {
+   color: #d54d7b; 
+   font-family: "Great Vibes", cursive; 
+   font-size: 50px; 
+   line-height: 100px; 
+   font-weight: normal; 
+   text-align: center;
+   text-shadow: 0 1px 1px #fff;
+}
+
+.user {
+  display: inline; 
+  font-weight: bold;
+}
+
+.message {
+  display: inline; 
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.dateTime {
+  margin-left: 10px;
+  display: inline;
+  color: gray;
+}
+
+.highlight {
+  text-decoration: underline;
+  color: pink;
+  cursor: pointer;
+}
+
+.btn {
+margin-top: 20px;
+padding: 10px 20px 11px;
+font-size: 15px;
+background-color: #F36C8C;
+font-weight: bold;
+text-shadow: 1px 1px #F36C8C;
+color: #ffffff;
+border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+border: 1px solid #F36C8C;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+.timeline {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
+}
+
+#margin {
+  color: white;
+  margin-top: 20px;
+	margin-left:12px;
+	margin-bottom:20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none; 
+}
+
+#username {
+  margin-left: 10px;
+	background-color:transparent;
+	border: 0;
+	outline: 0;
+	border-bottom:3px solid #FFF;
+	color: #FFF;
+	font-size:20px;
+	font-family:Courier, monospace;
+	height:28px;
+	font-weight:bold;
+	width:220px;
+}
+
+
+#text {
+	width:450px;
+	overflow:hidden;
+	background-color:#FFF;
+	color:#222;
+	font-family:Courier, monospace;
+	font-weight:normal;
+	font-size:15px;
+	resize:none;
+	line-height:40px;
+	margin-top: 20px;
+	padding: 45 100 34 100;
+	background-color: white;
+	background-repeat: repeat-y, repeat;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+}
+
+.submit {
+  display: block;
+  float: right;
+}
+
+
+
+
+
