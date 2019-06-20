@@ -60,14 +60,20 @@ Layout
   box-sizing: border-box;
 }
 
+body {
+  background: #888;
+}
+
+.banner {
+  background: cornflowerblue;
+  width: 100%;
+}
+
 .title {
   display: inline-block;
-  background-color: red;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  height: 50px;
-  font-size: 50px;
+  font-size: 75px;
+  margin: 15px auto;
+  color: white;
 }
 
 /*
@@ -78,13 +84,32 @@ Buttons
 
 .button {
   color: cornflowerblue;
-  background-color: lightgoldenrodyellow;
-  text-align: right;
+  background-color: white;
+  display: inline-block;
 
 }
 
 .button:hover {
-  color: yellow;
+  color: rgb(255, 196, 0);
 }
 
+.user {
+  color: cornflowerblue;
+}
 
+.user:hover {
+  color: rgb(255, 196, 0)
+}
+
+/*
+======
+Tweet 
+======
+*/
+div {
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  margin: 5px auto;
+  background-color: white;
+  
+}
